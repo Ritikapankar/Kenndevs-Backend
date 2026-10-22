@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:kennstack_test;DB_CLOSE_DELAY=-1;MODE=PostgreSQL;DATABASE_TO_LOWER=TRUE
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: ""
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: false
+  flyway:
+    enabled: false
+
+kennstack:
+  rate-limit:
+    enabled: true
+    requests-per-minute: 100
+  notifications:
+    recipient-email: ketanwachar2000@gmail.com
